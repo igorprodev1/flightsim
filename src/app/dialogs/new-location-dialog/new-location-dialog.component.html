@@ -1,0 +1,54 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+  <button mat-button mat-dialog-close tabindex="-1" class="float-right" (click)="revertMainMapState()">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+  </button>
+  <h2 mat-dialog-title>
+    <ng-container i18n="@@newLocationDlgHead">New Location</ng-container>
+  </h2>
+
+  <mat-dialog-content>
+    <div class="search-wrap">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Search" i18n-placeholder="@@aearchPlaceh" [(ngModel)]="searchQuery" />
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="go()">
+        <ng-container i18n="@@goBtn">Go</ng-container>
+      </button>
+    </div>
+    <div class="btn-wrapper">
+      <button mat-raised-button (click)="takeoffLoc()" [color]="model.takeoff&&!waitUserClkByMap[0]?'primary':null"
+        [disabled]="waitUserClkByMap[0]">
+        <ng-container *ngIf="!waitUserClkByMap[0]" i18n="@@selTakeoffLocBtn">Select Takeoff Location</ng-container>
+        <ng-container *ngIf="waitUserClkByMap[0]" i18n="@@clickByMapBtn">Click on terrain</ng-container>
+        <span *ngIf="waitUserClkByMap[0]" class="spinner-span">
+          <mat-spinner [diameter]="20"></mat-spinner>
+        </span>
+      </button>
+    </div>
+    <div class="btn-wrapper">
+      <button mat-raised-button (click)="pilotLoc()" [color]="model.pilot&&!waitUserClkByMap[1]?'primary':null"
+        [disabled]="!model.takeoff || waitUserClkByMap[1]">
+        <ng-container *ngIf="!waitUserClkByMap[1]" i18n="@@selPilotLocBtn">Select Pilot Location</ng-container>
+        <ng-container *ngIf="waitUserClkByMap[1]" i18n="@@clickByMapBtn">Click on terrain</ng-container>
+        <span *ngIf="waitUserClkByMap[1]" class="spinner-span">
+          <mat-spinner [diameter]="20"></mat-spinner>
+        </span>
+      </button>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Location Name" i18n-placeholder="@@locNamePlaceh" [(ngModel)]="model.name" />
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close (click)="revertMainMapState()">
+      <ng-container i18n="@@cancelBtn">Cancel</ng-container>
+    </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="save();revertMainMapState()"
+      [disabled]="!model || !model.name || !model.takeoff || !model.pilot">
+      <ng-container i18n="@@saveBtn">Save</ng-container>
+    </button>
+  </mat-dialog-actions>
+</div>

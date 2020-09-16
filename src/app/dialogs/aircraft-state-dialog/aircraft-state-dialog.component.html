@@ -1,0 +1,30 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+    <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2 mat-dialog-title>
+        <ng-container i18n="@@selControllerDlgHead">Aircraft State</ng-container>
+    </h2>
+
+    <mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Variables</mat-label>
+            <!-- <button mat-button>Opa</button> -->
+            <!-- [compareWith]="compareWith" -->
+            <mat-select multiple [formControl]="selectVars" > 
+                <mat-option *ngFor="let v of variables" [value]="v.variableId">{{v.variableLabel}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <table>
+            <tr *ngFor="let d of selected;let i = index;">
+                <td>
+                    {{d.variableLabel}}
+                </td>
+                <td>
+                    <simserv-variable-editor [variableDefinition]="d">
+                    </simserv-variable-editor>
+                </td>
+            </tr>
+        </table>
+    </mat-dialog-content>
+</div>

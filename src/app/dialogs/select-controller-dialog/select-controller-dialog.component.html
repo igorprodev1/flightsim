@@ -1,0 +1,36 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+    <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2 mat-dialog-title>
+        <ng-container i18n="@@selControllerDlgHead">Select Controller</ng-container>
+    </h2>
+
+    <mat-dialog-content>
+        <mat-grid-list cols="2">
+            <mat-grid-tile *ngFor="let c of controllers$ | async" (click)="setAsDefault(c.name)" class="gp"
+                [class.default-controller]="c.name === defaultControllerName">
+                <div class="gp-img">
+                    <img src="assets/svg/game-controller.svg">
+                </div>
+                <h3 class="gp-name">{{c.name}}</h3>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button mat-raised-button (click)="delete(defaultControllerName)">
+            <ng-container i18n="@@deleteBtn">Delete</ng-container>
+        </button>
+        <button mat-raised-button (click)="defaultControllerName?openConfControllerDlg(defaultControllerName):0">
+            <ng-container i18n="@@editBtn">Edit</ng-container>
+        </button>
+        <button mat-raised-button (click)="openConfControllerDlg()">
+            <ng-container i18n="@@newBtn">New</ng-container>
+        </button>
+        <button mat-raised-button color="primary" [mat-dialog-close]="true">
+            <ng-container i18n="@@flyBtn">Fly!</ng-container>
+        </button>
+    </mat-dialog-actions>
+
+</div>

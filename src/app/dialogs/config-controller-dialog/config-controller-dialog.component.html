@@ -1,0 +1,53 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+    <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2 mat-dialog-title>
+        <ng-container i18n="@@confControllerDlgHead">Configure Controller</ng-container>
+    </h2>
+
+    <mat-dialog-content>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Controller Name" i18n-placeholder="@@controllerNamePlaceh"
+                [(ngModel)]="controllerConfig.name" />
+        </mat-form-field>
+
+        <mat-card>
+            <table>
+                <tr>
+                    <th i18n="@@functionTableHead">Function</th>
+                    <th i18n="@@reverseTableHead">Reverse</th>
+                    <th i18n="@@inputTableHead">Input</th>
+                    <th i18n="@@stateTableHead">State</th>
+                </tr>
+                <tr *ngFor="let c of controllerConfig.functions; let i = index">
+                    <td>{{c.displayName}}</td>
+                    <td>
+                        <mat-checkbox [(ngModel)]="c.reverse"></mat-checkbox>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput placeholder="Use gamepad button or axis"
+                                i18n-placeholder="@@inpitGamepadButtAxisPlaceh"
+                                [value]="inputFieldValueCalculate(c)" (focus)="waitUseGP(c)"
+                                (focusout)="stopWaitingGP()" />
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-progress-bar mode="determinate" [value]="states[i]"></mat-progress-bar>
+                    </td>
+                </tr>
+            </table>
+        </mat-card>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close>
+            <ng-container i18n="@@cancelBtn">Cancel</ng-container>
+        </button>
+        <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="saveController()"
+            [disabled]="!controllerConfig.name">
+            <ng-container i18n="@@saveBtn">Save</ng-container>
+        </button>
+    </mat-dialog-actions>
+</div>

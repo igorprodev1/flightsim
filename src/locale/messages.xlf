@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="aircraftDlgHead" datatype="html">
+        <source>Select Aircraft</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/aircraft-dialog/aircraft-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancelBtn" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/aircraft-dialog/aircraft-dialog.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flyBtn" datatype="html">
+        <source>Fly!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/aircraft-dialog/aircraft-dialog.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/sel-location-dialog/sel-location-dialog.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="newLocationDlgHead" datatype="html">
+        <source>New Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aearchPlaceh" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goBtn" datatype="html">
+        <source>Go</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selTakeoffLocationPlaceh" datatype="html">
+        <source>Select Takeoff Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selPilotLocationPlaceh" datatype="html">
+        <source>Select Pilot Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locNamePlaceh" datatype="html">
+        <source>Location Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saveBtn" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/new-location-dialog/new-location-dialog.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="editLocationDlgHead" datatype="html">
+        <source>Edit Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="learchPlaceh" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/edit-location-dialog/edit-location-dialog.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selLocDlgHead" datatype="html">
+        <source>Select Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/sel-location-dialog/sel-location-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="editLogBtn" datatype="html">
+        <source>Edit Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/sel-location-dialog/sel-location-dialog.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="newLogBtn" datatype="html">
+        <source>New Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/sel-location-dialog/sel-location-dialog.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolAircraft" datatype="html">
+        <source>Aircraft</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolLocation" datatype="html">
+        <source>Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolCamera" datatype="html">
+        <source>Camera</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolCameraGr" datatype="html">
+        <source>Ground</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolCameraFo" datatype="html">
+        <source>Follow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolCameraFi" datatype="html">
+        <source>First Person</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flightsimToolCameraFr" datatype="html">
+        <source>Free Camera</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/flightsim/flightsim.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

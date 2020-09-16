@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.float-right {
+  float: right;
+}
+
+.gp figure {
+  flex-direction: column!important;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+/*
+active list item
+*/
+.active {
+  background-color: #e0e0e0;
+}
+
+
+.transparent-dialog-container .mat-dialog-container {
+  background-color: rgba(0, 0, 0, 0.486)!important;
+  color: white;
+}
+
+.transparent-dialog-container .mat-dialog-container mat-hint {
+  color: white;
+}
+
+.transparent-dialog-container .mat-form-field-infix {
+  background-color: white;
+  color: black;
+  padding-left: 5px!important;
+}

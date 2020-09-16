@@ -1,0 +1,19 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+    <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+    </button>
+    <h2 mat-dialog-title>
+      <ng-container i18n="@@aircraftDlgHead">Usage Guide</ng-container>
+    </h2>
+  
+    <mat-dialog-content>
+        <div [innerHTML]="guideText"></div>
+    </mat-dialog-content>
+  
+    <mat-dialog-actions>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true">
+        <ng-container i18n="@@flyBtn">Fly!</ng-container>
+      </button>
+    </mat-dialog-actions>
+  </div>
+  

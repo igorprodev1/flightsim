@@ -1,0 +1,44 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+  <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+  </button>
+  <h2 mat-dialog-title>
+    <ng-container i18n="@@selLocDlgHead">Select Location</ng-container>
+  </h2>
+
+  <mat-dialog-content>
+    <mat-grid-list cols="3" rowHeight="57vh">
+      <mat-grid-tile colspan="1">
+        <mat-card class="full-width card-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let l of locations; let i = index" (click)="selectLoc(l, i)"
+              [class.active]="selectedEnv?.name===l.name">{{ l.name }}
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <div class="right-wrap">
+          <mat-card>
+            <div id="globe"></div>
+          </mat-card>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="delete()" [disabled]="!selectedEnv">
+      <ng-container i18n="@@deleteBtn">Delete</ng-container>
+    </button>
+    <button mat-raised-button (click)="openEditLocationDlg()" [disabled]="!selectedEnv">
+      <ng-container i18n="@@editBtn">Edit</ng-container>
+    </button>
+    <button mat-raised-button mat-dialog-close (click)="openNewLocationDlg()">
+      <ng-container i18n="@@newBtn">New</ng-container>
+    </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!selectedEnv" (click)="fly()">
+      <ng-container i18n="@@flyBtn">Fly!</ng-container>
+    </button>
+  </mat-dialog-actions>
+</div>

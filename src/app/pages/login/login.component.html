@@ -1,0 +1,34 @@
+<mat-card class="container-column">
+    <mat-card-header>
+        <mat-card-title i18n="@@loginTitle">Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Email" [(ngModel)]="email" name="email" required
+                                i18n-placeholder="@@emailPlaceh">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Password" [(ngModel)]="password" type="password"
+                                name="password" required i18n-placeholder="@@passwordPlaceh">
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <a [routerLink]="['/register']" i18n="@@reqistrationLink">Registration</a>
+        <br/>
+        <mat-progress-bar [style.display]="showSpinner ? 'block' : 'none'" mode="indeterminate" >
+        </mat-progress-bar>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="login()" color="primary" i18n="@@loginBtn">Login</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,14 @@
+@import "../dialogs-style.scss";
+
+mat-dialog-actions {
+  justify-content: flex-end;
+}
+.search-wrap {
+  display: flex;
+  align-items: center;
+  button {
+    margin-left: 10px;
+  }
+}
+
+

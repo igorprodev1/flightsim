@@ -1,0 +1,45 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+  <button mat-button mat-dialog-close tabindex="-1" class="float-right">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">clear</mat-icon>
+  </button>
+  <h2 mat-dialog-title>
+    <ng-container i18n="@@aircraftDlgHead">Select Aircraft</ng-container>
+  </h2>
+
+  <mat-dialog-content>
+    <mat-grid-list cols="3" rowHeight="40vh">
+      <mat-grid-tile colspan="1">
+        <mat-card class="full-width card-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let a of aircrafts" [class.active]="selectedAirc?.name === a.name"
+              (click)="selectedAirc = a">{{
+                  a.name
+                }}</mat-list-item>
+          </mat-list>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <div class="right-wrap">
+          <mat-card *ngIf="selectedAirc && selectedAirc.image">
+            <div style="text-align: center">
+              <img style="background: skyblue; height: 200px; border: none;"
+                [src]="selectedAirc.image" />
+            </div>
+          </mat-card>
+          <mat-card *ngIf="selectedAirc" style="height: 28%">
+            <p>{{selectedAirc.description}}</p>
+          </mat-card>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>
+      <ng-container i18n="@@cancelBtn">Cancel</ng-container>
+    </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="fly()">
+      <ng-container i18n="@@flyBtn">Fly!</ng-container>
+    </button>
+  </mat-dialog-actions>
+</div>
